@@ -1,33 +1,28 @@
-package com.example.MovieVerse.controller;
+package com.example.MovieVerse;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class PageController{
+public class PageController {
 
     @GetMapping("/")
-    public String home(){
+    public String home() {
         return "home";
     }
 
-    @GetMapping("/search")
-    public String account(){
-        return  "search";
-
     @GetMapping("/category")
-    public String category(){
-        return "category";
+    public String category() {
+        return "category";  // 'category.html' 템플릿으로 이동
     }
 
     @GetMapping("/rating")
-    public String rating(){
+    public String rating() {
         return "rating";
     }
 
-    @GetMapping("/account")
-    public String account(){
-        return  "account";
+    @GetMapping("/search")
+    public String search() {
+        return "search";
     }
-
 }
